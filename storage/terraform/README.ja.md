@@ -5,7 +5,7 @@
 + Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします。
   + [Azure Storageとは?](../README.md) 
 + 使用する画像
-  + [いらすとや](https://www.irasutoya.com/)からお借りしています。
+  + [いらすとや](https://www.irasutoya.com/) さんからお借りしています。
 
 
 ## 準備
@@ -45,20 +45,20 @@ az account list -o table
 
 ## 実際に Terraform を使用して、リソースを作成していく
 
-+ Terraform の 初期設定
++ :whale: Terraform の 初期設定
 
 ```
 terraform init
 ```
 
-+ Plan
++ :whale: Terraform コマンドによるチェック
 
 ```
 terraform plan
 ```
 
 
-+ Apply
++ :whale: Terraform コマンドの本番反映
 
 ```
 terraform apply
