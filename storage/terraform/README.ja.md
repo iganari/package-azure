@@ -3,7 +3,7 @@
 ## 何が出来るの??
 
 + Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします
-
+  + [Azure Storageとは?](../README.md) 
 
 ## 準備
 
