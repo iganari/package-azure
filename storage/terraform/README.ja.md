@@ -1,4 +1,12 @@
-# Terraform Sample
+# Blob Storage のサンプル using Terraform
+
+## 何が出来るの??
+
++ Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします。
+  + [Azure Storageとは?](../README.md) 
++ 使用する画像
+  + [いらすとや](https://www.irasutoya.com/)からお借りしています。
+
 
 ## 準備
 
@@ -43,8 +51,6 @@ az account list -o table
 terraform init
 ```
 
-
-
 + Plan
 
 ```
@@ -63,3 +69,9 @@ terraform apply
 ```
 terraform destroy
 ```
+
+
+## 今後、実装予定
+
++ ライフサイクルについて設定を入れたいので、 Issue 化しています。
+    + https://github.com/iganari/package-azure/issues/3
