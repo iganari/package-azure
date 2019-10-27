@@ -67,6 +67,8 @@ terraform apply
 
 ## リソースの削除
 
++ :whale: Terraform コマンドによるリソース削除
+
 ```
 terraform destroy
 ```
