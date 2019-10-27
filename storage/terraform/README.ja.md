@@ -10,19 +10,40 @@
 az login
 ```
 
++ 登録しているサブスクリプションの確認
+
+```
+az account list
+az account list -o table
+```
+
+
 + :whale: サブスクリプションの設定
 
 ```
-WIP
+_s_id='{上記でSubscriptionIdの項のもの}'
+
+az account set --subscription ${_s_id}
 ```
 
-+ Azure の 初期設定
++ 再度、サブスクリプションの確認
+  + 任意のサブスクリプションの isDefault が True になれば OK
+
+```
+az account list -o table
+```
+
+
+
+## 実際に Terraform を使用して、リソースを作成していく
+
++ Terraform の 初期設定
 
 ```
 terraform init
 ```
 
-## 実際に Terraform を使用して、リソースを作成していく
+
 
 + Plan
 
