@@ -57,3 +57,9 @@ terraform plan
 ```
 terraform apply
 ```
+
+## リソースの削除
+
+```
+terraform destroy
+```
