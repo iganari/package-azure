@@ -1,4 +1,4 @@
-# Terraform Sample
+# Blob Storage のサンプル using Terraform
 
 ## 何が出来るの??
 
@@ -47,8 +47,6 @@ az account list -o table
 ```
 terraform init
 ```
-
-
 
 + Plan
 
