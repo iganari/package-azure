@@ -50,3 +50,10 @@ terraform init
 ```
 terraform plan
 ```
+
+
++ Apply
+
+```
+terraform apply
+```
