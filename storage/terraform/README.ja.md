@@ -1,5 +1,10 @@
 # Terraform Sample
 
+## 何が出来るの??
+
++ Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします
+
+
 ## 準備
 
 + 作業用のコンテナを起動 ---> :whale:
