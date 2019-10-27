@@ -68,3 +68,9 @@ terraform apply
 ```
 terraform destroy
 ```
+
+
+## 今後、実装予定
+
++ ライフサイクルについて設定を入れたいので、 Issue 化しています
+    + https://github.com/iganari/package-azure/issues/3
