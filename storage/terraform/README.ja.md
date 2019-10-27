@@ -15,3 +15,17 @@ az login
 ```
 WIP
 ```
+
++ Azure の 初期設定
+
+```
+terraform init
+```
+
+## 実際に Terraform を使用して、リソースを作成していく
+
++ Plan
+
+```
+terraform plan
+```
