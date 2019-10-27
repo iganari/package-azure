@@ -5,7 +5,7 @@
 + Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします。
   + [Azure Storageとは?](../README.md) 
 + 使用する画像
-  + [いらすとや](https://www.irasutoya.com/)からお借りしています。
+  + [いらすとや](https://www.irasutoya.com/) さんからお借りしています。
 
 
 ## 準備
