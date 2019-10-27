@@ -14,8 +14,8 @@ docker build . -t ${_I_TAG}
 
 docker run --rm \
            -it \
-           -v $BASEPATH:/opt/hejda/$DIREPATH \
-           -w /opt/hejda/$DIREPATH \
+           -v $BASEPATH:/opt/iganari/$DIREPATH \
+           -w /opt/iganari/$DIREPATH \
            -h ${_I_TAG} \
            --name ${_I_TAG} \
            ${_I_TAG} \
