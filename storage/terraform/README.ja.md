@@ -23,6 +23,7 @@ az login
 
 ```
 az account list
+OR
 az account list -o table
 ```
 
