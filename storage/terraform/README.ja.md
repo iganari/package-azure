@@ -1,4 +1,4 @@
-# Blob Storage のサンプル using Terraform
+# Terraform を用いた Azure Storage への画像アップロードのサンプル
 
 ## 何が出来るの??
 
@@ -6,7 +6,8 @@
   + [Azure Storageとは?](../README.md) 
 + 使用する画像
   + [いらすとや](https://www.irasutoya.com/) さんからお借りしています。
-
++ はてなブログに実行方法を書きました :pen:
+  + http://iganari.hatenablog.com/entry/2019/10/28/051438
 
 ## 準備
 
@@ -22,6 +23,7 @@ az login
 
 ```
 az account list
+OR
 az account list -o table
 ```
 
@@ -66,6 +68,8 @@ terraform apply
 
 ## リソースの削除
 
++ :whale: Terraform コマンドによるリソース削除
+
 ```
 terraform destroy
 ```
@@ -73,5 +77,5 @@ terraform destroy
 
 ## 今後、実装予定
 
-+ ライフサイクルについて設定を入れたいので、 Issue 化しています。
++ ライフサイクルについて設定を入れたいので、 Issue 化しています :pray:
     + https://github.com/iganari/package-azure/issues/3
