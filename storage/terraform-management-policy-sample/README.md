@@ -1,1 +1,3 @@
-# management policy sample
+# Sample Terraform
+
+Plz check Japanese :pray: ---> [README.ja](README.ja.md)
