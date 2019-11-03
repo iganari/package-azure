@@ -10,7 +10,7 @@ variable "storage" {
   type = "map"
   default = {
     asa_name = "asasample"  # name can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long.
-    asc_name = "asc-sample"  # Only lowercase alphanumeric characters and hyphens allowed.
+    asc_name = "asc-sample" # Only lowercase alphanumeric characters and hyphens allowed.
   }
 }
 
@@ -20,5 +20,15 @@ variable "image-hiyoko" {
     "hiyoko_baby.png",
     "hiyoko.png",
     "niwatori_hiyoko_koushin.png"
+  ]
+}
+
+variable "image-penguin" {
+  type = list
+  default = [
+    "animal_chara_computer_penguin.png",
+    "animal_chara_smartphone_penguin.png",
+    "natsubate_penguin.png",
+    "ondanka_animal_penguin.png"
   ]
 }

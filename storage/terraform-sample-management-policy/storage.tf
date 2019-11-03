@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "asa_default" {
 }
 
 resource "azurerm_storage_container" "asc_default" {
-  name                  = "${lookup(var.storage, "asc_name")}"
+  name = "${lookup(var.storage, "asc_name")}"
   # resource_group_name   = "${azurerm_resource_group.arg_default.name}"
   storage_account_name  = "${azurerm_storage_account.asa_default.name}"
   container_access_type = "private"
@@ -51,6 +51,19 @@ resource "azurerm_storage_blob" "asb_hiyoko" {
   source                 = "images/irasutoya/hiyoko/${element(var.image-hiyoko, count.index)}"
 }
 
-output "check_asb_default" {
-  value = "${azurerm_storage_blob.asb_hiyoko}"
+# output "check_asb_default" {
+#   value = "${azurerm_storage_blob.asb_hiyoko}"
+# }
+
+
+
+
+resource "azurerm_storage_blob" "asb_penguin" {
+  storage_account_name   = "${azurerm_storage_account.asa_default.name}"
+  storage_container_name = "${azurerm_storage_container.asc_default.name}"
+  type                   = "Block"
+
+  count  = "${length(var.image-penguin)}"
+  name   = "sample/penguin-${element(var.image-penguin, count.index)}"
+  source = "images/irasutoya/penguin/${element(var.image-penguin, count.index)}"
 }
