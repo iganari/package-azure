@@ -13,6 +13,10 @@
 
 + 作業用のコンテナを起動 ---> :whale:
 
+```
+sh docker-build-run.sh
+```
+
 + :whale: CLI 上で Azure にログイン
 
 ```
