@@ -58,7 +58,7 @@ resource "azurerm_storage_management_policy" "policy_penguin" {
     name = "policy2penguin"   ## A rule name can contain any combination of alpha numeric characters.
     enabled = true
     filters {
-      prefix_match = ["sample/penguin-"]
+      prefix_match = ["asc-sample/sample/penguin-"]
       blob_types = ["blockBlob"]
     }
     actions {
