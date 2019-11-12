@@ -54,29 +54,11 @@ resource "azurerm_storage_blob" "asb_penguin" {
 resource "azurerm_storage_management_policy" "policy_penguin" {
   storage_account_id = "${azurerm_storage_account.asa_default.id}"
 
-  rule {
-    name = "policy2penguin"   ## A rule name can contain any combination of alpha numeric characters.
-    enabled = true
-    filters {
-      prefix_match = ["asc-sample/sample/penguin-"]
-      blob_types = ["blockBlob"]
-    }
-    actions {
-      base_blob {
-        tier_to_cool_after_days_since_modification_greater_than = 1
-        tier_to_archive_after_days_since_modification_greater_than = 2
-        delete_after_days_since_modification_greater_than = 3
-      }
-      snapshot {
-        delete_after_days_since_creation_greater_than = 4
-      }
-    }
-  }
   # rule {
-  #   name = "policy2hiyoko"   ## A rule name can contain any combination of alpha numeric characters.
+  #   name = "policy2penguin"   ## A rule name can contain any combination of alpha numeric characters.
   #   enabled = true
   #   filters {
-  #     prefix_match = ["asc-sample/sample"]
+  #     prefix_match = ["asc-sample/sample/penguin-"]
   #     blob_types = ["blockBlob"]
   #   }
   #   actions {
@@ -90,4 +72,22 @@ resource "azurerm_storage_management_policy" "policy_penguin" {
   #     }
   #   }
   # }
+  rule {
+    name = "policy2hiyoko"   ## A rule name can contain any combination of alpha numeric characters.
+    enabled = true
+    filters {
+      prefix_match = ["asc-sample/sample"]
+      blob_types = ["blockBlob"]
+    }
+    actions {
+      base_blob {
+        tier_to_cool_after_days_since_modification_greater_than = 1
+        tier_to_archive_after_days_since_modification_greater_than = 2
+        delete_after_days_since_modification_greater_than = 3
+      }
+      snapshot {
+        delete_after_days_since_creation_greater_than = 4
+      }
+    }
+  }
 }
