@@ -1,4 +1,6 @@
-# Terraform を用いた Azure Storage への画像アップロードのサンプル
+# Azure Storage の Management Policy のサンプル
+
+WIP
 
 ## 何が出来るの??
 
@@ -8,6 +10,11 @@
   + [いらすとや](https://www.irasutoya.com/) さんからお借りしています。
 + はてなブログに実行方法を書きました :pen:
   + http://iganari.hatenablog.com/entry/2019/10/28/051438
+
+
++ 公式ドキュメント
+  + https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal#examples
+
 
 ## 準備
 
