@@ -1,10 +1,9 @@
 # ref: https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/terraform-create-complete-vm
 
 resource "azurerm_resource_group" "arg_count_test" {
-  name     = var.rg_name
-  location = "eastus"
+  name     = "${lookup(var.resource_group, "name")}"
+  location = "${lookup(var.resource_group, "location")}"
 }
-
 
 resource "azurerm_virtual_network" "avn_count_test" {
   name          = "${lookup(var.network, "name")}"
