@@ -1,23 +1,26 @@
 # ref: https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/terraform-create-complete-vm
 
-resource "azurerm_resouce_group" "arg_count_test" {
-  name = "hogehoge"
+resource "azurerm_resource_group" "arg_count_test" {
+  name     = var.rg_name
   location = "eastus"
 }
 
 
 resource "azurerm_virtual_network" "avn_count_test" {
-  name = "hogehoge"
-  address_space = ["10.0.0.0/16"]
-  location = "eastus"
-  resource_group_name = azure_resource_group.arg_count_test.name
+  name          = "${lookup(var.network, "name")}"
+  address_space = ["${lookup(var.network, "address")}"]
+  location      = "${lookup(var.network, "location")}"
+
+  resource_group_name = azurerm_resource_group.arg_count_test.name
 }
 
 resource "azurerm_subnet" "as_count_test" {
-  name = "subnet"
-  resource_group_name = azure_resource_group.arg_count_test.name
-  virtual_network_name = azure_virautl_network.avn_count_test.name
-  address_prefix = "10.0.2.0/24"
+  name           = "${lookup(var.subnet, "name")}"
+  address_prefix = "${lookup(var.subnet, "address")}"
+
+  resource_group_name  = azurerm_resource_group.arg_count_test.name
+  virtual_network_name = azurerm_virtual_network.avn_count_test.name
+
 }
 
 
