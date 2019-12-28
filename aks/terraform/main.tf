@@ -34,3 +34,5 @@ resource "azurerm_log_analytics_solution" "alas_aks" {
     product = "OMGallery/ContainerInsights"
   }
 }
+
+resource "azurerm_kubernetes_cluster"
