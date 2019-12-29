@@ -22,8 +22,23 @@ sh docker-build-run.sh
 ssh-keygen -t rsa -b 4096 -f _ssh/id_rsa
 ```
 
-+ Azure との認証
++ :whale: Azure との認証
 
 ```
+WIP
+```
 
++ :whale: Terraform の実行
+
+```
+terraform init
+```
+```
+terraform validate
+```
+```
+terraform plan
+```
+```
+terraform apply
 ```
