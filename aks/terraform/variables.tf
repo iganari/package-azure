@@ -1,3 +1,7 @@
+variable "agent_count" {
+  default = 3
+}
+
 variable "resource_group_name" {
   default = "iganari-aks-test"
 }
@@ -6,14 +10,17 @@ variable "location" {
   default = "Central US"
 }
 
+variable "ssh_public_key" {
+  default = "~/.ssh/id_rsa.pub"
+}
 
 
 variable "client_id" {
-  default = ""
+  # default = ""
 }
 
 variable "client_secret" {
-  defautl = ""
+  # defautl = ""
 }
 
 # refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
@@ -26,9 +33,5 @@ variable "cluster_name" {
 }
 
 variable "dns_prefix" {
-  default = "WIP"
-}
-
-variable "agent_count" {
   default = "WIP"
 }

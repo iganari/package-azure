@@ -2,7 +2,7 @@ terraform {
   required_version = "0.12.18"
 }
 # provider "azurerm"{
-#   version = ""
+#   version = "1.39.0"
 # }
 
 resource "azurerm_resource_group" "aks-test" {
@@ -49,11 +49,19 @@ resource "azurerm_kubernetes_cluster" "aks-test" {
     # }
   }
 
+  # agent_pool_profile {
+  #   os_type         = "Linux"
+  #   count           = var.agent_count
+  #   vm_size         = "Standard_DS1_v2"
+  #   name            = "agentpool"
+  # }
+
+
   default_node_pool {
     name            = "agentpool"
-    couont          = var.agent_count
+    # count           = var.agent_count
     vm_size         = "Standard_DS1_v2"
-    os_type         = "Linux"
+    # os_type         = "Linux"
     os_disk_size_gb = 30
   }
 
@@ -64,7 +72,7 @@ resource "azurerm_kubernetes_cluster" "aks-test" {
 
   addon_profile {
     oms_agent {
-      enable                     = true
+      enabled                    = true
       log_analytics_workspace_id = azurerm_log_analytics_workspace.aks-test.id
     }
   }
