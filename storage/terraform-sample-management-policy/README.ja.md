@@ -1,16 +1,21 @@
-# Blob Storage のサンプル using Terraform
+# Azure Storage の Management Policy のサンプル
+
+WIP
 
 ## 何が出来るの??
 
-+ Azure の Blob Storage にローカルのイメージを Terraform を通じてアップロードします。
-  + [Azure Storageとは?](../README.md) 
-+ 使用する画像
-  + [いらすとや](https://www.irasutoya.com/) さんからお借りしています。
++ Azure Blob Storage の機能の一つである Lifecycle を使ってみます 
++ 公式ドキュメント
+  + https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-portal#examples
 
 
 ## 準備
 
 + 作業用のコンテナを起動 ---> :whale:
+
+```
+sh docker-build-run.sh
+```
 
 + :whale: CLI 上で Azure にログイン
 
@@ -22,6 +27,7 @@ az login
 
 ```
 az account list
+OR
 az account list -o table
 ```
 
@@ -66,12 +72,8 @@ terraform apply
 
 ## リソースの削除
 
++ :whale: Terraform コマンドによるリソース削除
+
 ```
 terraform destroy
 ```
-
-
-## 今後、実装予定
-
-+ ライフサイクルについて設定を入れたいので、 Issue 化しています。
-    + https://github.com/iganari/package-azure/issues/3
