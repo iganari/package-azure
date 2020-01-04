@@ -11,11 +11,11 @@ output "cluster_ca_certificate" {
 }
 
 output "cluster_username" {
-  value = azurerm_kubernetes_cluster.aks-test.kube_config.0.cluster_username
+  value = azurerm_kubernetes_cluster.aks-test.kube_config.0.username
 }
 
 output "cluster_password" {
-  value = azurerm_kubernetes_cluster.aks-test.kube_config.0.cluster_password
+  value = azurerm_kubernetes_cluster.aks-test.kube_config.0.password
 }
 
 output "kube_config" {
