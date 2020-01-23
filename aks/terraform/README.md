@@ -13,6 +13,12 @@
 
 + az コマンドが使える環境
 
+```
+az --version
+```
+
++ 上記が難しい場合は以下を参照して下さい
+
 <details>
 <summary>docker コマンドが使える場合</summary>
 
