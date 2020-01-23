@@ -1,12 +1,30 @@
 # Terraform で AKS を構築する
 
-## ドキュメント
+## 公式ドキュメント
 
 + Terraform
   + https://www.terraform.io/docs/providers/azurerm/r/container_service.html
 + Azure
   + Tutorial: Create a Kubernetes cluster with Azure Kubernetes Service using Terraform
   + https://docs.microsoft.com/en-us/azure/terraform/terraform-create-k8s-cluster-with-tf-and-aks
+  + 今回はこちらをやっていきます。
+
+## 準備
+
++ docker コマンドが使える環境
++ az コマンドが使える環境
+
+<details open>
+<summary>1月</summary>
+
+```
+cd prepare
+sh docker-build.sh
+```
+
+
+</details>
+
 
 ## 実行方法 (簡易版)
 
