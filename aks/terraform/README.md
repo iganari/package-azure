@@ -11,11 +11,10 @@
 
 ## 準備
 
-+ docker コマンドが使える環境
 + az コマンドが使える環境
 
-<details open>
-<summary>1月</summary>
+<details>
+<summary>docker コマンドが使える場合</summary>
 
 ```
 cd prepare
