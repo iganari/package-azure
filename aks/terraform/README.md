@@ -24,11 +24,17 @@ az --version
 
 ```
 cd prepare
-sh docker-build.sh
+sh docker-build-run.sh
 ```
 
 
 </details>
+
+## バケットの作成
+
+```
+az create bucket hogehoge
+```
 
 
 ## 実行方法 (簡易版)
