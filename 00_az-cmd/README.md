@@ -25,3 +25,17 @@ $ az account show
   }
 }
 ```
+
+## Resource Group
+
++ Resource Group を作成
+
+```
+az group create --name ${Your resource group name} --location eastus
+```
+
++ Resource Group の確認
+
+```
+az group list
+```
