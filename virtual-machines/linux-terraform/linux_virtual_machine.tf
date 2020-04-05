@@ -13,6 +13,8 @@ locals {
     maintainer  = "https://github.com/iganari"
     source_code = "https://github.com/iganari/package-azure"
   }
+
+  admin_username = "iganari"
 }
 
 resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
@@ -39,7 +41,7 @@ resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
 
   tags = local.tags
   
-  # admin_username = ""
+  admin_username = loacl.admin_username
   # admin_ssh_key {
   #   username = ""
   #   public_key = file("~/.ssh/id_rsa.pub")

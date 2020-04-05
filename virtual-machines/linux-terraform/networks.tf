@@ -23,13 +23,13 @@ resource "azurerm_subnet" "pkg-azure-vm-linux" {
 }
 
 resource "azurerm_network_interface" "pkg-azure-vm-linux" {
-  name = local.interface_name
-  location = azurerm_resource_group.pkg-azure-vm-linux.location
-  resource_group = azurerm_resource_group.pkg-azure-vm-linux.name
+  name                = local.interface_name
+  location            = azurerm_resource_group.pkg-azure-vm-linux.location
+  resource_group_name = azurerm_resource_group.pkg-azure-vm-linux.name
 
   ip_configuration {
-    name = local.interface_ipaddr_name
-    subnet_id = azurerm_subnet.pkg-azure-vm-linux.id
-   private_ip_address_allcation = "Dynamic"
+    name                          = local.interface_ipaddr_name
+    subnet_id                     = azurerm_subnet.pkg-azure-vm-linux.id
+    private_ip_address_allocation = "Dynamic"
   }
 }
