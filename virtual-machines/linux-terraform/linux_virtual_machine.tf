@@ -8,6 +8,11 @@ locals {
   os_image_offer     = "UbuntuServer"
   os_image_sku       = "18.04-LTS"
   os_image_version   = "latest"
+
+  tags = {
+    maintainer  = "https://github.com/iganari"
+    source_code = "https://github.com/iganari/package-azure"
+  }
 }
 
 resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
@@ -31,6 +36,8 @@ resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
   }
 
   priority = "Spot"
+
+  tags = local.tags
   
   # admin_username = ""
   # admin_ssh_key {
