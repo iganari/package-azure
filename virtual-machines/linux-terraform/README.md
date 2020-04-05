@@ -2,14 +2,15 @@
 
 ## Official Document
 
-+ WIP
++ Terraform / azurerm_linux_virtual_machine
+  + https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html
 
 ## Preparation
 
 + Terraform
   + v0.12.x ~
 + Azure Provider
-  + 2.0 ~
+  + 2.0.0
 
 
 ## Create VM
