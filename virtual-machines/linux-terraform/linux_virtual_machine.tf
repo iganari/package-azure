@@ -30,6 +30,8 @@ resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
     version   = local.os_image_version
   }
 
+  priority = "Spot"
+  
   # admin_username = ""
   # admin_ssh_key {
   #   username = ""
