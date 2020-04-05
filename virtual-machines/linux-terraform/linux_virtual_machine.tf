@@ -20,7 +20,7 @@ resource "azurerm_linux_virtual_machine" "pkg-azure-vm-linux" {
   resource_group_name = azurerm_resource_group.pkg-azure-vm-linux.name
   location            = azurerm_resource_group.pkg-azure-vm-linux.location
   size                = local.vm_size
-  network_interface_id = [
+  network_interface_ids = [
     azurerm_network_interface.pkg-azure-vm-linux.id,
   ]
 

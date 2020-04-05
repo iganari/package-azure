@@ -9,17 +9,17 @@ locals {
 
 
 resource "azurerm_virtual_network" "pkg-azure-vm-linux" {
-  name           = local.network_name
-  address_space  = [local.network_address]
-  location       = azurerm_resource_group.pkg-azure-vm-linux.location
-  resource_group = azurerm_resource_group.pkg-azure-vm-linux.name
+  name                = local.network_name
+  address_space       = [local.network_address]
+  location            = azurerm_resource_group.pkg-azure-vm-linux.location
+  resource_group_name = azurerm_resource_group.pkg-azure-vm-linux.name
 }
 
 resource "azurerm_subnet" "pkg-azure-vm-linux" {
   name                 = local.subnet_name
   address_prefix       = local.subnet_address
   resource_group_name  = azurerm_resource_group.pkg-azure-vm-linux.name
-  virtual_network_name = azurerm_virtual_network_pkg-azure-vm-linux.name
+  virtual_network_name = azurerm_virtual_network.pkg-azure-vm-linux.name
 }
 
 resource "azurerm_network_interface" "pkg-azure-vm-linux" {
