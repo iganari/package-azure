@@ -16,12 +16,23 @@
 ## Create VM
 
 ```
-git clone hogehoge
-cd hogehoge/fugafuga
+git clone https://github.com/iganari/package-azure.git
+cd package-azure/virtual-machines/linux-terraform
 ```
+
++ Auth Azure
+
 ```
 az login
 ```
+
++ Check Your Curent tenantId
+
+```
+az account show
+```
+
++ Terraform Build
 
 ```
 terraform init
