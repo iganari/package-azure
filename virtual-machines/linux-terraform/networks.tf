@@ -1,10 +1,10 @@
 locals {
-  network_name    = "hogehoge"
-  network_address = "10.0.0.0/16"
-  subnet_name     = "hogehoge"
-  subnet_address  = "10.0.2.0/24"
-  interface_name  = "hogehoge"
-  interface_ipaddr_name = "hogehoge"
+  network_name          = "hogehoge"
+  network_address       = "10.0.0.0/16"
+  subnet_name           = "hogehoge"
+  subnet_address        = "10.0.2.0/24"
+  interface_name        = "vm-linux-${lookup(var.common, "name")}-interface"
+  interface_ipaddr_name = "vm-linux-${lookup(var.common, "name")}-ipaddr"
 }
 
 

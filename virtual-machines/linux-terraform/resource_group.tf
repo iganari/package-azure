@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "pkg-azure-vm-linux" {
-  name = "package-azure-sample"
+  name     = "vm-linux-${lookup(var.common, "name")}-resource-group"
   location = "West Europe" # Todo: tokyo
 }
